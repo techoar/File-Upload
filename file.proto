@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service upload {
+    rpc uploadFile (fileData) returns (response) {}
+}
+
+message fileData {
+    bytes images = 1;
+}
+
+message response {
+    string message = 1;
+}
