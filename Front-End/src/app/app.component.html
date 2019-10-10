@@ -1,0 +1,17 @@
+<div class="d-fr-jc">
+  <img #image alt="test" class="thumbnail" *ngIf="file">
+  <h5 *ngIf="error" class="error">Only images are allowed</h5>
+  <div class="task-file" #taskFile (click)="triggerBrowse()" (drop)="overrideDefault($event);onDrop($event)"
+    (dragover)="overrideDefault($event);onDragOver()" (dragleave)="overrideDefault($event);onDragLeave()">
+    <div class="task-file-content">
+      <h4 *ngIf="!fileSelected">
+        Drop files here or click to upload.<br><small>(Files with extensions png, jpg, gif are allowed)</small>
+      </h4>
+      <h5 *ngIf="fileSelected">
+        {{file.name}}
+      </h5>
+    </div>
+    <input type="file" #fileInput (change)="onChange()">
+  </div>
+  <button type="submit" class="task-upload" (click)="upload()">Upload</button>
+</div>

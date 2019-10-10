@@ -1,0 +1,79 @@
+h4 {
+  font-weight: normal;
+}
+
+h5 {
+  font-weight: lighter;
+}
+
+.d-fr-jc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.thumbnail {
+  max-width: 300px;
+  margin-bottom: 1rem;
+  border: 1px dashed #03d7fc;
+  padding: 0.25rem;
+
+  &::after {
+    content: 'hellow';
+    display: block;
+    color: #fc033a;
+  }
+
+}
+
+.error {
+  color: #fc033a;
+}
+
+.task-file {
+  width: 350px;
+  border: 2px dashed #03d7fc;
+  padding: 0 1rem;
+  position: relative;
+
+  &.dragOver {
+    border-color: lighten(#03d7fc, 30%);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .task-file-content {
+    text-align: center;
+  }
+
+  input[type="file"] {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
+
+}
+
+.task-upload {
+  background: #03d7fc;
+  color: #fff;
+  width: calc(350px + 2rem + 4px);
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+
+  &:hover {
+    background-color: darken(#03d7fc, 5);
+    cursor: pointer;
+  }
+
+}
